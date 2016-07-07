@@ -14,7 +14,7 @@ const _credentialOptions = new WeakMap();
 const _credentials = new WeakMap();
 
 class GettyImagesApi {
-    
+
     get credentials() {
         return _credentialOptions.get(this);
     }
@@ -27,11 +27,11 @@ class GettyImagesApi {
     set creds(value) {
         _credentials.set(this,value);
     }
-    
+
     get hostName() {
         return _hostName.get(this);
     }
-    
+
     set hostName(value) {
         _hostName.set(this,value);
     }
@@ -55,7 +55,7 @@ class GettyImagesApi {
 
     getAccessToken(next) {
         var creds = this.creds;
-        
+
         if (creds.RefreshToken) {
             creds.refreshAccessToken(function (err, accessToken) {
                 if (err) {
