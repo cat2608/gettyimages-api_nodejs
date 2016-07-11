@@ -45,16 +45,16 @@ class GettyImagesApi {
         }
 
         if (!requestOptions) {
-					requestOptions = {};
-				}
+          requestOptions = {};
+        }
 
-				if (!requestOptions.hostName) {
+        if (!requestOptions.hostName) {
           requestOptions.hostName = "api.gettyimages.com";
         }
 
         this.hostName = requestOptions;
-				this.credentials = credentials;
-        this.creds = new Credentials(credentials.apiKey, credentials.apiSecret, credentials.username, credentials.password, credentials.refreshToken, hostName);
+        this.credentials = credentials;
+        this.creds = new Credentials(credentials.apiKey, credentials.apiSecret, credentials.username, credentials.password, credentials.refreshToken, this.hostName);
     }
 
     getAccessToken(next) {
