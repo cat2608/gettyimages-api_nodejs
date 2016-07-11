@@ -54,7 +54,6 @@ class GettyImagesApi {
 
         this.hostName = requestOptions;
 				this.credentials = credentials;
-        this.creds = new Credentials(credentials.apiKey, credentials.apiSecret, credentials.username, credentials.password, credentials.refreshToken, hostName);
     }
 
     getAccessToken(next) {
